@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "module": "commonjs",
+    "rootDir": "src",
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["dominant-baseline"]
+        }
+      }
+    ]
+  },
+  "exclude": ["dist"]
+}
