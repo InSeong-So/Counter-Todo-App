@@ -1,10 +1,19 @@
 {
-  "name": "root",
-  "version": "1.0.0",
+  "name": "@project/workspace",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "taskkill": "kill-port --port 3000",
+    "build": "lerna run --parallel build",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "start:vanilla": "yarn run taskkill && lerna run --scope @project/vanilla start --parallel",
+    "start:redux": "yarn run taskkill && lerna run --scope @project/react-redux start --parallel",
+    "start:context": "yarn run taskkill && lerna run --scope @project/react-context start --parallel",
+    "start:recoil": "yarn run taskkill && lerna run --scope @project/react-recoil start --parallel",
+    "start:vuex": "yarn run taskkill && lerna run --scope @project/vue-vuex start --parallel"
+  },
   "dependencies": {
     "@craco/craco": "^6.4.3"
   },
@@ -13,6 +22,7 @@
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
+    "@cypress/code-coverage": "^3.9.12",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.24",
     "@types/react": "^17.0.39",

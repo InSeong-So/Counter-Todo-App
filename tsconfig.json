@@ -27,7 +27,7 @@
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "types": ["node"],
     "paths": {
-      "@ui/*": ["../ui/src/*"],
+      "@project/ui/src/*": ["../ui/src/*"],
     },
   },
 }
