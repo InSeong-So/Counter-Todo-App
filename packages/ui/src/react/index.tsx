@@ -352,3 +352,10 @@ export const Button = styled.button`
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 `;
+
+export const CounterHr = styled.hr`
+  height: 3px;
+  border: 1px solid #333333;
+  background-color: #333333;
+  border-radius: 15px;
+`;
