@@ -1,42 +1,43 @@
 {
-  "name": "@project/workspace",
+  "name": "@counter-app/monorepo",
+  "packageManager": "yarn@3.2.2",
   "private": true,
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "taskkill": "kill-port --port 3000",
-    "build": "lerna run --parallel build",
-    "bootstrap": "lerna bootstrap --use-workspaces",
-    "start:vanilla": "yarn run taskkill && lerna run --scope @project/vanilla start --parallel",
-    "start:redux": "yarn run taskkill && lerna run --scope @project/react-redux start --parallel",
-    "start:context": "yarn run taskkill && lerna run --scope @project/react-context start --parallel",
-    "start:recoil": "yarn run taskkill && lerna run --scope @project/react-recoil start --parallel",
-    "start:vuex": "yarn run taskkill && lerna run --scope @project/vue-vuex start --parallel"
-  },
-  "dependencies": {
-    "@craco/craco": "^6.4.3"
+    "postinstall": "husky install",
+    "react-context": "yarn workspace @counter-app/react-context",
+    "react-recoil": "yarn workspace @counter-app/react-recoil",
+    "react-redux": "yarn workspace @counter-app/react-redux",
+    "vanilla": "yarn workspace @counter-app/vanilla",
+    "vue-vuex": "yarn workspace @counter-app/vue-vuex"
   },
   "devDependencies": {
-    "@babel/core": "7.17.0",
-    "@babel/preset-env": "7.16.11",
-    "@babel/preset-react": "7.16.7",
-    "@babel/preset-typescript": "7.16.7",
-    "@cypress/code-coverage": "^3.9.12",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.24",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/parser": "^5.10.0",
-    "eslint": "^8.7.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "kill-port": "1.6.1",
-    "lerna": "^4.0.0",
-    "prettier": "^2.5.1",
-    "prettier-eslint": "^13.0.0",
-    "typescript": "^4.5.4"
+    "@babel/core": "7.18.10",
+    "@commitlint/cli": "^17.0.3",
+    "@types/node": "^18.7.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.tsx": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

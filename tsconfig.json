@@ -1,5 +1,4 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
     "allowJs": true,
@@ -26,8 +25,9 @@
     "skipLibCheck": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "types": ["node"],
-    "paths": {
-      "@project/ui/src/*": ["../ui/src/*"],
-    },
   },
+  "include": [],
+  "exclude": [
+    "node_modules"
+  ]
 }
