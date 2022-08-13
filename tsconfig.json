@@ -24,7 +24,7 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "types": ["node"],
+    "jsx": "preserve"
   },
   "include": [],
   "exclude": []
