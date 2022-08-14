@@ -1,5 +1,5 @@
-# Counter App
-> 다양한 방법으로 Counter를 만듭니다.
+# Counter Todo App
+> 다양한 방법으로 Counter 및 Todo-App을 다루면서 라이브러리와 철학, 패턴을 학습합시다.
 
 
 ## 개요

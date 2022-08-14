@@ -1039,6 +1039,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.4"\
       ],\
       [\
+        "hamt_plus",\
+        "npm:1.0.2"\
+      ],\
+      [\
         "hard-rejection",\
         "npm:2.1.0"\
       ],\
@@ -1517,6 +1521,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [\
         "readable-stream",\
         "npm:3.6.0"\
+      ],\
+      [\
+        "recoil",\
+        "virtual:850e94a5b812b1b79edf37a80e0cb7c31f4b2c9dfe9756118835943006b04da32962147a9dbcf27813634d4705115b34ae63806049f40a52e7f24f208d765d30#npm:0.7.5"\
       ],\
       [\
         "redent",\
@@ -2581,10 +2589,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@picocss/pico", "npm:1.5.3"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/uuid", "npm:8.3.4"],\
             ["@vitejs/plugin-react", "npm:1.3.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e090800abfd7e67371c71c04c4a89ef1fbbad9d1d54da1229f97b569203c0ee378b10cf73439fb7bc674946c121accd7c007947156fe30325a73c855154ec040#npm:18.2.0"],\
+            ["recoil", "virtual:850e94a5b812b1b79edf37a80e0cb7c31f4b2c9dfe9756118835943006b04da32962147a9dbcf27813634d4705115b34ae63806049f40a52e7f24f208d765d30#npm:0.7.5"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"],\
+            ["uuid", "npm:8.3.2"],\
             ["vite", "virtual:850e94a5b812b1b79edf37a80e0cb7c31f4b2c9dfe9756118835943006b04da32962147a9dbcf27813634d4705115b34ae63806049f40a52e7f24f208d765d30#npm:2.9.15"]\
           ],\
           "linkType": "SOFT"\
@@ -5200,6 +5211,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["hamt_plus", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-af26ea32db.zip/node_modules/hamt_plus/",\
+          "packageDependencies": [\
+            ["hamt_plus", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["hard-rejection", [\
         ["npm:2.1.0", {\
           "packageLocation": "./.yarn/cache/hard-rejection-npm-2.1.0-a80f2a977d-7baaf80a0c.zip/node_modules/hard-rejection/",\
@@ -6681,6 +6701,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],\
             ["string_decoder", "npm:1.3.0"],\
             ["util-deprecate", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["recoil", [\
+        ["npm:0.7.5", {\
+          "packageLocation": "./.yarn/cache/recoil-npm-0.7.5-b0fe76743a-19b410cca6.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "npm:0.7.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:850e94a5b812b1b79edf37a80e0cb7c31f4b2c9dfe9756118835943006b04da32962147a9dbcf27813634d4705115b34ae63806049f40a52e7f24f208d765d30#npm:0.7.5", {\
+          "packageLocation": "./.yarn/__virtual__/recoil-virtual-ae3f07fc29/0/cache/recoil-npm-0.7.5-b0fe76743a-19b410cca6.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "virtual:850e94a5b812b1b79edf37a80e0cb7c31f4b2c9dfe9756118835943006b04da32962147a9dbcf27813634d4705115b34ae63806049f40a52e7f24f208d765d30#npm:0.7.5"],\
+            ["@types/react", "npm:18.0.17"],\
+            ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/react-native", null],\
+            ["hamt_plus", "npm:1.0.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:e090800abfd7e67371c71c04c4a89ef1fbbad9d1d54da1229f97b569203c0ee378b10cf73439fb7bc674946c121accd7c007947156fe30325a73c855154ec040#npm:18.2.0"],\
+            ["react-native", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
