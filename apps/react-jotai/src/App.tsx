@@ -1,12 +1,20 @@
-import Counter from './components/Counter';
-import Todo from './components/Todo';
+import { Suspense } from 'react';
+import { Loading, Counter, Todo } from './components';
 
 function App() {
   return (
     <main className="container">
-      <Counter />
+      <section className="loadable">
+        <Suspense fallback={<Loading />}>
+          <Counter />
+        </Suspense>
+      </section>
       <hr />
-      <Todo />
+      <section className="loadable">
+        <Suspense fallback={<Loading />}>
+          <Todo />
+        </Suspense>
+      </section>
     </main>
   );
 }

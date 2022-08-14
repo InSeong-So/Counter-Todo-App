@@ -2561,11 +2561,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@picocss/pico", "npm:1.5.3"],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/uuid", "npm:8.3.4"],\
             ["@vitejs/plugin-react", "virtual:e090800abfd7e67371c71c04c4a89ef1fbbad9d1d54da1229f97b569203c0ee378b10cf73439fb7bc674946c121accd7c007947156fe30325a73c855154ec040#npm:2.0.1"],\
             ["jotai", "virtual:2a36bd30045dff58962c676a2aeba535a0745ddd34dfda29a2622516292e772610263533e64224c579f6f5afd2ab2c5f6606d11024d124e4eb5fd32d5facdab2#npm:1.7.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e090800abfd7e67371c71c04c4a89ef1fbbad9d1d54da1229f97b569203c0ee378b10cf73439fb7bc674946c121accd7c007947156fe30325a73c855154ec040#npm:18.2.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"],\
+            ["uuid", "npm:8.3.2"],\
             ["vite", "virtual:e090800abfd7e67371c71c04c4a89ef1fbbad9d1d54da1229f97b569203c0ee378b10cf73439fb7bc674946c121accd7c007947156fe30325a73c855154ec040#npm:3.0.7"]\
           ],\
           "linkType": "SOFT"\
