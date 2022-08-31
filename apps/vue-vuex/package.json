@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
@@ -11,6 +11,7 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@picocss/pico": "^1.5.3",
     "@vitejs/plugin-vue": "^2.3.4",
     "typescript": "^4.5.4",
     "vite": "^2.9.15",
