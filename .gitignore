@@ -67,6 +67,15 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+.yarn/*
+yarn.lock
+!.yarn/cache
+!.yarn/patches
+!.yarn/unplugged
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # dotenv environment variables file
 .env
