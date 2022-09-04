@@ -1,5 +1,5 @@
-import { useRecoilState } from 'recoil';
-import { todoItemState } from '../../recoil/todo/atom';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { todoItemSelectorFamily, todoSelector } from '../../recoil/todo/atom';
 
 const CompleteIcon = () => (
   <svg
@@ -39,14 +39,14 @@ const RemoveIcon = () => (
 );
 
 const TodoItem = ({ id }: { id: string }) => {
-  const [todo, setTodo] = useRecoilState(todoItemState(id));
+  const todo = useRecoilValue(todoItemSelectorFamily(id));
   const classNames = `row ${todo.isComplete && 'todo-complete'}`;
 
-  setTodo({
-    id,
-    title: todo.title,
-    isComplete: todo.isComplete,
-  });
+  // setTodo({
+  //   id,
+  //   title: todo.title,
+  //   isComplete: todo.isComplete,
+  // });
 
   return (
     <div className={classNames} id={todo.id}>

@@ -9,5 +9,5 @@ export const readonlyCountAtom = atom(async get => {
 });
 
 export const writeCountAtom = atom<null, number, Promise<void>>(null, async (get, set, payload) => {
-  set(countAtom, get(countAtom) + payload);
+  set(countAtom, payload === 0 ? 0 : get(countAtom) + payload);
 });

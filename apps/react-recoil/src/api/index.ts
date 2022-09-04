@@ -3,15 +3,32 @@ import { TodoTypes } from '../@types';
 
 let serverStore: TodoTypes[] = [];
 
-export const getTodoData = (id: string): TodoTypes => {
-  const item = serverStore.find(todo => todo.id === id);
-  if (item === undefined) throw new Error('none data');
-  return item;
+export const getTodoData = async (id: string): Promise<TodoTypes> => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const item = serverStore.find(todo => todo.id === id);
+      if (item === undefined) throw new Error('none data');
+      resolve(item);
+    }, 1000);
+  });
 };
 
 export const getTodoList = async (): Promise<TodoTypes[]> => {
   return new Promise(resolve => {
     setTimeout(() => resolve(serverStore), 1000);
+  });
+};
+
+export const addTodoData = async (title: string): Promise<void> => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      serverStore.push({
+        id: uuidv4(),
+        title,
+        isComplete: false,
+      });
+      resolve();
+    }, 1000);
   });
 };
 

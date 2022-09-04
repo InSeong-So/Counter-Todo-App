@@ -1,3 +1,5 @@
+import { DefaultValue } from 'recoil';
+
 export const getPrimeNumbers = (maxNumber = 1) => {
   if (maxNumber <= 1) return 0;
 
@@ -21,4 +23,9 @@ export const getPrimeNumbers = (maxNumber = 1) => {
   }
 
   return primeArray.filter(isPrime => isPrime).length;
+};
+
+export const guardRecoilDefaultValue = (candidate: any): candidate is DefaultValue => {
+  if (candidate instanceof DefaultValue) return true;
+  return false;
 };

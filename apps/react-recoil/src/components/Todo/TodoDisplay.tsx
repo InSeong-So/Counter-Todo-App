@@ -1,9 +1,9 @@
 import { useRecoilValue } from 'recoil';
-import { todoListState } from '../../recoil/todo/atom';
+import { todoListAtom } from '../../recoil/todo/atom';
 import TodoItem from './TodoItem';
 
 const TodoDisplay = () => {
-  const todoList = useRecoilValue(todoListState(null));
+  const todoList = useRecoilValue(todoListAtom);
 
   return (
     <section id="todo-display">

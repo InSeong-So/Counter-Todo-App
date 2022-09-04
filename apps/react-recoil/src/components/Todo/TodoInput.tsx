@@ -1,13 +1,12 @@
 import { FormEvent } from 'react';
-import { useRecoilCallback, useRecoilState } from 'recoil';
-import { TodoTypes } from '../../@types';
-import { todoListState } from '../../recoil/todo/atom';
+import { useRecoilCallback } from 'recoil';
+import { todoListAtom } from '../../recoil/todo/atom';
 import { Input } from '../shared';
 
 const TodoInput = () => {
-  const addTodo = useRecoilCallback(({ snapshot, set }) => async (todo: string) => {
-    const todoList = await snapshot.getPromise(todoListState(null));
-    console.log(todoList, todo);
+  const addTodo = useRecoilCallback(({ snapshot, set }) => async (title: string) => {
+    const todoList = await snapshot.getPromise(todoListAtom);
+    set(todoListAtom, { id: '1234', title, isComplete: false });
   });
 
   const handleSubmit = (event: FormEvent) => {
